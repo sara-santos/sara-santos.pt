@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #ffff;
+    --black: #000000;
+    --blue: #0000ff;
+}
+
+@media (max-width: 800px){
+    :root{
+        font-size: 15px;
+    }
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+}
+
+
+body{
+    font-family: 'aktiv-grotesk', sans-serif;
+    line-height: 1.4;
+    background-color: var(--white);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--blue);
+    transition: .1s;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+}
+
+.flex-container > *{
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+
+/* ------ HEADER ------ */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    z-index: 100;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------ MAIN ------ */
+ 
+main{
+    padding: 2.7rem 1.5rem 1.5rem;
+}
+
+.projects{
+    width: calc(100% / 12 * 3 );
+    overflow: scroll;
+    height: 100vh;
+    padding-bottom: 30rem;
+}
+
+.name{
+    width: calc(100% / 12 * 3 );
+    overflow: scroll;
+}
+
+.projects::-webkit-scrollbar {
+    display: none;
+  }
+
+.name::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects .card-project{
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 800px){
+    .projects{
+        width: 100%;
+        overflow: none;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .projects .card-project{
+        padding-top: 3rem;
+    }
+
+    .name{
+        width: 50%;
+    }
+
+}
+
+.projects .card-project:last-of-type{
+    padding-bottom: 0;
+}
+
+.logo{
+    width: 60%;
+    top: 20rem;
+    transform: rotate(-7deg);
+    position: fixed;
+    z-index: 100;
+    right: 13%;
+    padding: 0;
+}
+
+
+@media (max-width: 800px){
+    .logo{
+        top: 45rem;
+
+}}
+
+/* ------ ABOUT ------ */
+
+.text-about{
+    width: calc(100% / 12 * 8 );
+    padding-top: 1.5rem;
+
+}
+
+@media (max-width: 800px){
+    .text-about{
+        width: 100%;
+
+}}
+
+.cc{
+    width: calc(100% / 12 * 12 );
+    border-radius: 16px;
+    margin-top: 1.5rem;
+    
+}
+
+/* ------ PROJECTS ------ */
+
+.description{
+    width: calc(100% / 12 * 8 );
+    padding-top: 1.5rem;
+    overflow: scroll;
+    height: 100vh;
+}
+
+.description::-webkit-scrollbar {
+    display: none;
+  }
+
+.text-description{
+    margin-bottom: 1.5rem;
+}
+
+.active {
+    color: var(--blue);
+    pointer-events: none;
+}
+
+.description .projects-images img{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: .75rem;
+}
+
+@media (max-width: 800px){
+    .description{
+        width: 100%;
+        overflow: none;
+        height: auto;
+        padding-top: 0;
+    }
+}
+
+.img-rotate{
+    transform: rotate(180deg);
+}
